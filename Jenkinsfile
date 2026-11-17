@@ -18,13 +18,13 @@ pipeline {
             steps {
                 sh '/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12 --version'
                 sh '/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12 -m venv .venv'
-                sh '.venv/bin/pip install -r requirements.txt'
+                sh '.venv/bin/python3.12 -m pip install -r requirements.txt'
             }
         }
 
         stage('Run Pytest') {
             steps {
-                sh '.venv/bin/python -m pytest -v'
+                sh '.venv/bin/python3.12 -m pytest -v'
             }
         }
     }
