@@ -16,8 +16,8 @@ pipeline {
 
         stage('Setup Python') {
             steps {
-                sh 'python3 --version'
-                sh 'python3 -m venv .venv'
+                sh '/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12 --version'
+                sh '/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12 -m venv .venv'
                 sh '.venv/bin/pip install -r requirements.txt'
             }
         }
