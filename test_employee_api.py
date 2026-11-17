@@ -1,4 +1,4 @@
-from Config import BASE_URL
+from settings import BASE_URL
 import requests
 import allure
 

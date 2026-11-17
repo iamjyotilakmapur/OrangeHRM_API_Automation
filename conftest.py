@@ -1,7 +1,7 @@
 import pytest
 import requests
+from settings import BASE_URL, TOKEN
 
-from Config import BASE_URL, TOKEN
 from utils.loggers import get_logger
 
 logger = get_logger(__name__)
